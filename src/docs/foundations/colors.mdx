@@ -1,0 +1,17 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
+import { normalizeScale } from '../../utils/color.adapter.ts';
+import tokens from '../../tokens/primitives/colors.json';
+
+<Meta title="Foundations/Colors" />
+
+# Colors
+
+## Primitive Colors
+Below are all the colors used in the design system, organized by their respective color families.
+
+<ColorPalette>
+  {Object.entries(tokens.color)
+  .map(([name, scale]) => (
+    <ColorItem key={name} title={name} colors={normalizeScale(scale)} />
+  ))}
+</ColorPalette>

@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:tokens": "style-dictionary build --config ./style-dictionary.config.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
@@ -35,6 +36,7 @@
     "globals": "^17.4.0",
     "playwright": "^1.59.1",
     "storybook": "^10.3.5",
+    "style-dictionary": "^5.4.0",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.58.0",
     "vite": "^8.0.4",
