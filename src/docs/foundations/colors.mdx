@@ -7,11 +7,11 @@ import tokens from '../../tokens/primitives/colors.json';
 # Colors
 
 ## Primitive Colors
+
 Below are all the colors used in the design system, organized by their respective color families.
 
 <ColorPalette>
-  {Object.entries(tokens.color)
-  .map(([name, scale]) => (
+  {Object.entries(tokens.color).map(([name, scale]) => (
     <ColorItem key={name} title={name} colors={normalizeScale(scale)} />
   ))}
 </ColorPalette>
