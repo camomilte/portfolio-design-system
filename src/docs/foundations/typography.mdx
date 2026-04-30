@@ -1,0 +1,41 @@
+import { Meta, Typeset } from '@storybook/addon-docs/blocks';
+import primitives from '../../tokens/primitives/typography.json';
+
+<Meta title="Foundations/Typography" />
+
+# Typography
+
+## Primitive Typography Tokens
+The following are the primitive typography tokens that form the basis of our typography system. These tokens include font families, font sizes, font weights and line heights.
+
+### Font Families
+{Object.entries(primitives.font.family).map(
+  ([name, token]) => (
+    <Typeset
+      key={name}
+      fontSizes={[primitives.font.size.base.value]}
+      fontWeight={primitives.font.weight.regular.value}
+      fontFamily={token.value}
+    />
+  )
+)}
+
+### Font Sizes
+<Typeset
+  fontSizes={Object.values(primitives.font.size).map(t => t.value)}
+  fontWeight={primitives.font.weight.regular.value}
+  fontFamily={primitives.font.family.raleway.value}
+/>
+
+### Font Weights
+{Object.entries(primitives.font.weight).map(
+  ([name, token]) => (
+    <Typeset
+      key={name}
+      fontSizes={[primitives.font.size.base.value]}
+      fontWeight={token.value}
+      fontFamily={primitives.font.family.raleway.value}
+      sampleText={name.charAt(0).toUpperCase() + name.slice(1)}
+    />
+  )
+)}

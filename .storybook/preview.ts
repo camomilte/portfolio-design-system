@@ -1,5 +1,7 @@
 import type { Preview } from '@storybook/react-vite'
 
+import '@fontsource/boldonse';
+
 const preview: Preview = {
   parameters: {
     controls: {
