@@ -8,9 +8,18 @@ import { BorderSwatch } from '../components/BorderSwatch';
 
 ## Border radius
 
-Below are border radius tokens
+Below are available border radius tokens
 
 {Object.entries(border.border.radius).map(([name, token]) => (
 
   <BorderSwatch key={name} name={name} radius={token.value} width={1} />
+))}
+
+## Border widths
+
+Below are available border width tokens
+
+{Object.entries(border.border.width).map(([name, token]) => (
+
+  <BorderSwatch key={name} name={name} radius={12} width={token.value} />
 ))}

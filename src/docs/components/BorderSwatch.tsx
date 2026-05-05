@@ -23,7 +23,7 @@ export const BorderSwatch = ({ name, radius = 0, width = 1 }) => {
             textAlign: 'center',
           }}
         >
-          "{name}" <br /> Radius: {radius}, Width: {width}px
+          "{name}" <br /> Radius: {radius}, Width: {width}
         </p>
       </div>
     </div>
