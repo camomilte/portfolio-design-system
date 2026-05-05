@@ -1,0 +1,16 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import border from '../../tokens/primitives/border.json';
+import { BorderSwatch } from '../components/BorderSwatch';
+
+<Meta title="Foundations/Border" />
+
+# Border tokens
+
+## Border radius
+
+Below are border radius tokens
+
+{Object.entries(border.border.radius).map(([name, token]) => (
+
+  <BorderSwatch key={name} name={name} radius={token.value} width={1} />
+))}
