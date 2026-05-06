@@ -1,31 +1,24 @@
 export const BorderSwatch = ({ name, radius = 0, width = 1 }) => {
   return (
-    <div style={{ marginBottom: 32 }}>
+    <div
+      style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}
+    >
       <div
         style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          height: 100,
-          background: '#fff9ef',
+          width: '200px',
+          height: '100px',
+          backgroundColor: '#eff1ff',
           borderStyle: 'solid',
           borderColor: '#1840c4',
           borderRadius: radius,
           borderWidth: width,
-          boxSizing: 'border-box',
+          marginRight: '24px',
         }}
-      >
-        <p
-          style={{
-            color: '#1840c4',
-            fontWeight: 600,
-            fontSize: 16,
-            textAlign: 'center',
-          }}
-        >
-          "{name}" <br /> Radius: {radius}, Width: {width}
-        </p>
-      </div>
+      />
+      <span>
+        <span style={{ fontWeight: 700 }}>{name}</span> <br />
+        width: {width}, radius: {radius}
+      </span>
     </div>
   );
 };

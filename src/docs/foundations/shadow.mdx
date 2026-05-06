@@ -1,0 +1,32 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import tokens from '../../tokens/primitives/shadow.json';
+
+<Meta title="Foundations/Shadow" />
+
+# Shadow tokens
+
+The following are the available shadow tokens.
+
+{Object.entries(tokens.shadow).map(([name, token]) => (
+
+  <div key={name} style={{ 
+    display: 'flex', 
+    alignItems: 'center', 
+    marginBottom: '40px' 
+  }}>
+    <div
+      style={{
+        width: '200px',
+        height: '100px',
+        backgroundColor: '#aeb9fe',
+        borderRadius: '4px',
+        boxShadow: token.value,
+        marginRight: '24px',
+      }}
+    />
+    <span>
+      <span style={{ fontWeight: 700 }}>{name}</span>
+      <br /> {token.value}
+    </span>
+  </div>
+))}
